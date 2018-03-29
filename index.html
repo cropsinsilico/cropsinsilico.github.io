@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="cis">
+  <head>
+    <title>Crops in Silico Prototype</title>
+    <base href="/">
+    <link rel=icon href="asset/favicon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Interactive model builder for Crops in Silico" />
+    <meta charset="UTF-8">
+    
+    <!-- Default Font -->
+    <link href='//fonts.googleapis.com/css?family=Source+Code+Pro:400' rel='stylesheet' type='text/css'>
+    
+    <!-- Third-party CSS -->
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome-animation/dist/font-awesome-animation.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-swagger-ui/dist/css/swagger-ui.min.css"> 
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-slider/slider.css" />
+    <!--<link rel="stylesheet" type="text/css" href="../node_modules/the-graph/themes/the-graph-dark.css">-->
+    <link rel="stylesheet" type="text/css" href="node_modules/the-graph/themes/the-graph-light.css">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <!-- Brand icon -->
+          <div class="navbar-brand">
+            <a  href="#/" class="brand-link"><img alt="Crops in Silico" src="asset/cropsinsilico-logo-16x20.png"></a>
+          </div>
+          
+          <!-- Brand Text -->
+          <a href="#/" class="navbar-left">
+            <span class="navbar-text pull-right"> Crops in Silico</span>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-question-circle-o"></i> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/swagger">API Reference</a></li>
+                <li><a target="_blank" href="https://cropsinsilico.github.io/cis_interface/">Documentation</a></li>
+                <li><a target="_blank" href="http://cropsinsilico.org/about-us/">About</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    <!-- Control Panel / Palette -->
+    <div class="container-fluid">
+      <div ng-view></div>
+    </div>
+    
+    <!-- AngularJS + Bootstrap -->
+    <script src="node_modules/lodash/lodash.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    
+    <!-- AngularJS + Swagger UI -->
+    <script src="node_modules/js-yaml/dist/js-yaml.min.js"></script>
+    <script src="node_modules/angular-swagger-ui/dist/scripts/swagger-ui.min.js"></script>
+    <script src="node_modules/angular-swagger-ui/dist/scripts/modules/swagger-yaml-parser.min.js"></script>
+    
+    <!-- AngularJS Slider UI Component -->
+    <script src="node_modules/angular-slider/slider.js"></script>
+    
+    <!-- AngularJS Clipboard Support -->
+    <script src="node_modules/angular-clipboard/angular-clipboard.js"></script>
+    
+    <!-- AngularJS + React + TheGraph -->
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/klayjs-noflo/klay-noflo.js"></script>
+    <script src="node_modules/hammerjs/hammer.min.js"></script>
+    <script src="node_modules/ngreact/ngReact.js"></script>
+    <script src="node_modules/the-graph/dist/the-graph.js"></script>
+
+    <!-- Now load our app source -->
+    <link rel="stylesheet" href="asset/cis.css">
+    <script src="app/cis-api.js"></script>
+    <script src="app/cis.module.js"></script>
+    <script src="app/editor.directive.js"></script>
+    <script src="app/main/main.controller.js"></script>
+    <script src="app/main/modals/export.controller.js"></script>
+    <script src="app/swagger/swagger.controller.js"></script>
+  </body>
+</html>
