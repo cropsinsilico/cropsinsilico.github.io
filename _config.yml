@@ -6,7 +6,6 @@ exclude:
   - README
   - README.markdown
   - README.txt
-  - node_modules
   - Dockerfile
   - Gruntfile.js
   - package.json
