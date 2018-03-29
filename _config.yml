@@ -1,0 +1,17 @@
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - node_modules
+  - Dockerfile
+  - Gruntfile.js
+  - package.json
+  - package-lock.json
+  - swagger.yaml
+  - README.md
+#   - Gemfile
+#   - Gemfile.lock
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
