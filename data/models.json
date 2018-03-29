@@ -1,0 +1,55 @@
+{
+    "inport": {
+        "name": "inport",
+        "label": "InPort",
+        "description": "An input port for the graph",
+        "icon": "signin",
+        "driver": "GCCModelDriver",
+        "args": "unused",
+        "inports": [],
+        "outports": [
+            {"name": "value", "type": "all"}
+        ]
+    },
+    "outport": {
+        "name": "outport",
+        "label": "OutPort",
+        "description": "An output port for the graph",
+        "icon": "signout",
+        "driver": "GCCModelDriver",
+        "args": "unused",
+        "inports": [
+            {"name": "value", "type": "all"}
+        ],
+        "outports": []
+    },
+    "cmodela": {
+        "name": "cmodela",
+        "label": "C Model A",
+        "description": "A model written in C",
+        "icon": "code",
+        "driver": "GCCModelDriver",
+        "args": "./src/gs_lesson4_modelA.c",
+        "inports": [
+            {"name": "inputa", "type": "all"}
+        ],
+        "outports": [
+            {"name": "outputa", "type": "all"}
+        ]
+    },
+    "cmodelb": {
+        "name": "cmodelb",
+        "label": "C Model B",
+        "description": "A model written in C",
+        "icon": "code",
+        "driver": "GCCModelDriver",
+        "args": "./src/gs_lesson4_modelB.c",
+        "inports": [
+            {"name": "inputb", "type": "all"}
+        ],
+        "outports": [
+            {"name": "outputb", "type": "all"}
+        ]
+    }
+}
+
