@@ -283,6 +283,9 @@ angular.module('cis')
       }
     }).then(function(data) {
       $scope.showResults({ results: data, title: "View Graph YAML", isJson: false });
+    }, function() {
+      $log.error("Failed to send to graph to API server");
+      alert("Error submitting request: is the server running?");
     }).finally(function() {
       $scope.formatting = false;
     });
