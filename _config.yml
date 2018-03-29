@@ -2,7 +2,10 @@
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - node_modules
+  - README.md
+  - README
+  - README.markdown
+  - README.txt
   - Dockerfile
   - Gruntfile.js
   - package.json
