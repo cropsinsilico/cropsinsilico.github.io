@@ -48,7 +48,9 @@
         </div>
         
         <div class="pull-right">
-          <button class="btn btn-xs btn-default" ng-click="useConnections = !useConnections"><i class="fa fa-fw" ng-class="{ 'fa-check-square': !useConnections, 'fa-square': useConnections }"></i> Legacy Mode</button>
+          <button class="btn btn-xs btn-default" ng-click="useConnections = !useConnections"  tooltip-placement="left" uib-tooltip="Disabling legacy mode will format YAML using the new 'connections' style for cisrun">
+            <i class="fa fa-fw" ng-class="{ 'fa-check-square': !useConnections, 'fa-square': useConnections }"></i> Legacy Mode
+          </button>
           
           <button class="btn btn-xs btn-default" ng-click="exportGraph()" tooltip-placement="left" uib-tooltip="View Raw JSON of the current graph">
             <i class="fa fa-fw fa-code"></i> View Raw JSON
