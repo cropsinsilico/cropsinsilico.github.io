@@ -29,12 +29,12 @@
         "description": "A model written in C",
         "icon": "code",
         "driver": "GCCModelDriver",
-        "args": "./src/gs_lesson4_modelA.c",
+        "args": "./src/gs_lesson5_modelA.c",
         "inports": [
-            {"name": "inputa", "type": "all"}
+            {"name": "inputa", "label": "inputA", "type": "all"}
         ],
         "outports": [
-            {"name": "outputa", "type": "all"}
+            {"name": "outputa", "label": "outputA", "type": "all"}
         ]
     },
     "cmodelb": {
@@ -43,12 +43,12 @@
         "description": "A model written in C",
         "icon": "code",
         "driver": "GCCModelDriver",
-        "args": "./src/gs_lesson4_modelB.c",
+        "args": "./src/gs_lesson5_modelB.c",
         "inports": [
-            {"name": "inputb", "type": "all"}
+            {"name":"inputb", "label": "inputB", "type": "all"}
         ],
         "outports": [
-            {"name": "outputb", "type": "all"}
+            {"name": "outputb", "label": "outputB", "type": "all"}
         ]
     }
 }
