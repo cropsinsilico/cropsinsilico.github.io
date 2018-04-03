@@ -10,7 +10,7 @@
           <th width="15%" style="text-align:center;">Info</th>
           <th width="15%" style="text-align:center;">Add</th>
         </tr>
-        <tr ng-repeat="model in getModelOptions(state.library)" tooltip-placement="right" uib-tooltip="{{ model.description }}">
+        <tr ng-repeat="model in getModelOptions(state.library)" tooltip-placement="right" tooltip-append-to-body="true" uib-tooltip="{{ graphHasModel(model.name) ? 'You can only add one model of each type.' : model.description }}">
           <td>{{ model.description }} ({{ model.label || model.name }})</td>
           <td style="text-align:center;">
             <button class="btn btn-xs btn-info" style="margin:0;" ng-click="showResults({ results: model, title: 'View Raw Model', isJson: true })">
@@ -18,7 +18,7 @@
             </button>
           </td>
           <td style="text-align:center;">
-            <button class="btn btn-xs btn-primary" style="margin:0;" ng-click="addNodeInstance(model)">
+            <button class="btn btn-xs btn-primary" style="margin:0;" ng-disabled="graphHasModel(model.name)" ng-click="addNodeInstance(model)">
               <i class="fa fa-fw fa-plus"></i> 
             </button>
           </td>
@@ -157,3 +157,6 @@
     </div>
   </div>
 </section>
+
+
+<pre>{{ state.graph.nodes | json }}</pre>

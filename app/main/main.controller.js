@@ -180,6 +180,11 @@ angular.module('cis')
     return newNode;
   };
   
+  $scope.graphHasModel = function(modelKey) {
+    let exists = _.find($scope.state.graph.nodes, ["component", modelKey]);
+    return exists;
+  };
+  
   /** Exports the current graph to JSON */
   $scope.exportGraph = function() {
     $scope.showResults({ results: $scope.state.graph.toJSON(), title: "View Raw Graph", isJson: true });
