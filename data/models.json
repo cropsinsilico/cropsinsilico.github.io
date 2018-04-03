@@ -3,7 +3,7 @@
         "name": "inport",
         "label": "InPort",
         "description": "An input port for the graph",
-        "icon": "signin",
+        "icon": "sign-in",
         "driver": "GCCModelDriver",
         "args": "unused",
         "inports": [],
@@ -15,7 +15,7 @@
         "name": "outport",
         "label": "OutPort",
         "description": "An output port for the graph",
-        "icon": "signout",
+        "icon": "sign-out",
         "driver": "GCCModelDriver",
         "args": "unused",
         "inports": [
