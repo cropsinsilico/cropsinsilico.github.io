@@ -331,7 +331,7 @@ angular.module('cis')
             });
             transformedInputs.push({
               name: edge.destination.label,
-              type: edge.type || 'InputDriver',
+              driver: edge.type || 'RMQInputDriver',
               args: edge.args || edge.id
             });
           });
@@ -342,7 +342,7 @@ angular.module('cis')
             });
             transformedOutputs.push({
               name: edge.source.label,
-              type: edge.type || 'OutputDriver',
+              driver: edge.type || 'RMQOutputDriver',
               args: edge.args || edge.id
             });
           });
