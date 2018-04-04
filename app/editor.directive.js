@@ -114,11 +114,11 @@ angular.module('cis')
                   iconLabel: "delete",
                   action: deleteEdge
                 },
-                e4: {
+                /*e4: {
                   icon: "edit",
                   iconLabel: "edit",
                   action: editEdge
-                }
+                }*/
               },
               node: {
                 s4: {
@@ -126,11 +126,11 @@ angular.module('cis')
                   iconLabel: "delete",
                   action: deleteNode
                 },
-                w4: {
+                /*w4: {
                   icon: "copy",
                   iconLabel: "copy",
                   action: copyNode
-                },
+                },*/
                 e4: {
                   icon: "edit",
                   iconLabel: "edit",
@@ -176,8 +176,8 @@ angular.module('cis')
                 
             };
             
-            scope.graph.on('endTransaction', render); // graph changed
-            window.addEventListener("resize", render);
+            //scope.graph.on('endTransaction', render); // graph changed
+            //window.addEventListener("resize", render);
             
             // Re-render if the graph changes
             scope.$watch("graph", function(newValue, oldValue) { 
@@ -197,40 +197,20 @@ angular.module('cis')
                 }
             }, true);
             
-            /*angular.element($window).bind('resize', function() {
+            angular.element($window).bind('resize', function() {
                 scope.height = $window.innerHeight;
                 scope.width = $window.innerWidth;
-                $log.debug(`Resize event detected: ${scope.width}x${scope.height}... reloading!`);
+                $log.info(`Resize event detected: ${scope.width}x${scope.height}... reloading!`);
                 render();
     
                 // manual $digest required as resize event is outside of angular
                 scope.$digest();
             });
             
-            scope.$watch("width", function(newValue, oldValue) {
-                $log.debug(`Width changed: ${oldValue} -> ${newValue}... reloading!`, newValue);
-                render();
-            });
-            scope.$watch("height", function(newValue, oldValue) {
-                $log.debug(`Height changed: ${oldValue} -> ${newValue}... reloading!`, newValue);
-                render();
-            });*/
-            
             scope.$watchCollection("library", function(newValue, oldValue) {
                 $log.debug("Library changed... reloading!", newValue);
                 render();
             });
-            
-            /*
-            scope.$watchCollection("graph.nodes", function(newValue, oldValue) {
-                $log.debug(`Node count changed: ${oldValue} -> ${newValue}... reloading!`);
-                render();
-            });
-            
-            scope.$watchCollection("graph.edges", function(newValue, oldValue) {
-                $log.debug(`Edge count changed: ${oldValue} -> ${newValue}... reloading!`);
-                render();
-            });*/
         }
     }
 }])
