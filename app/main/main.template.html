@@ -1,10 +1,18 @@
 <section>
-  <div class="row">
+  <the-graph-editor id="editor" class="the-graph-light" graph="state.graph" library="state.library" 
+      loading="state.loading" width="state.width" height="state.height"></the-graph-editor>
+       
+  <div id="modelPalette">
     <!-- Component Palette -->
-    <div class="col-sm-2">
-      <h4>Library</h4>
+    <div>
+      <div>
+        <h4 class="pull-left" id="libraryHeader">Component Library</h4>
+        <button class="btn btn-xs btn-default pull-right" ng-click="showPalette = !showPalette">
+          <i class="fa fa-fw" ng-class="{ 'fa-chevron-up': showPalette, 'fa-chevron-down': !showPalette }"></i>
+        </button>
+      </div>
       
-      <table class="table table-condensed table-hover">
+      <table class="table table-condensed table-hover" ng-if="showPalette">
         <tr>
           <th>Model</th>
           <th width="15%" style="text-align:center;">Info</th>
@@ -13,7 +21,7 @@
         <tr ng-repeat="model in getModelOptions(state.library)" tooltip-placement="right" tooltip-append-to-body="true" uib-tooltip="{{ graphHasModel(model.name) ? 'You can only add one model of each type.' : model.description }}">
           <td>{{ model.description }} ({{ model.label || model.name }})</td>
           <td style="text-align:center;">
-            <button class="btn btn-xs btn-info" style="margin:0;" ng-click="showResults({ results: model, title: 'View Raw Model', isJson: true })">
+            <button class="btn btn-xs btn-default" style="margin:0;" ng-click="showResults({ results: model, title: 'View Raw Model', isJson: true })">
               <i class="fa fa-fw fa-code"></i> 
             </button>
           </td>
@@ -26,59 +34,46 @@
       </table>
     </div>
     
-    <!-- Graph Canvas -->
-    <div ng-class="{ 'col-sm-10': !selectedItem, 'col-sm-8': selectedItem }">
-      <div class="row">
-        <div class="pull-left">
-          <button class="btn btn-xs btn-success" ng-click="saveGraph()" tooltip-placement="right" ng-disabled="selectedItem" uib-tooltip="Save current graph into your browser's local storage">
-            <i class="fa fa-fw fa-save" ng-class="{ 'faa-horizontal animated': graphIsChanged() }"></i> Save Graph
-          </button>
-          
-          <button class="btn btn-xs btn-danger" ng-click="clearGraph()" tooltip-placement="right" ng-disabled="selectedItem" uib-tooltip="Clear current graph from the canvas">
-            <i class="fa fa-fw fa-trash"></i> Clear Graph
-          </button>
-          
-          <button class="btn btn-xs btn-default" style="color:orange" ng-click="addInport()" ng-disabled="selectedItem" tooltip-placement="right" uib-tooltip="Add an InPort to current graph">
-            <i class="fa fa-fw fa-sign-in"></i> Add InPort
-          </button>
-          
-          <button class="btn btn-xs btn-default" style="color:green" ng-click="addOutport()" ng-disabled="selectedItem" tooltip-placement="right" uib-tooltip="Add an OutPort to current graph">
-            <i class="fa fa-fw fa-sign-out"></i> Add OutPort
-          </button>
-        </div>
+    <!-- Graph Button Bar -->
+    <div id="buttonBar">
+      <!-- Graph Operations -->
+      <div class="pull-left">
+        <button class="btn btn-xs btn-success" ng-click="saveGraph()" tooltip-placement="right" ng-disabled="selectedItem" uib-tooltip="Save current graph into your browser's local storage">
+          <i class="fa fa-fw fa-save" ng-class="{ 'faa-horizontal animated': graphIsChanged() }"></i>
+        </button>
         
-        <div class="pull-right">
-          <button class="btn btn-xs btn-default" ng-click="useConnections = !useConnections"  tooltip-placement="left" uib-tooltip="Disabling legacy mode will format YAML using the new 'connections' style for cisrun">
-            <i class="fa fa-fw" ng-class="{ 'fa-check-square': !useConnections, 'fa-square': useConnections }"></i> Legacy Mode
-          </button>
-          
-          <button class="btn btn-xs btn-default" ng-click="exportGraph()" tooltip-placement="left" uib-tooltip="View Raw JSON of the current graph">
-            <i class="fa fa-fw fa-code"></i> View Raw JSON
-          </button>
-          
-          <button type="submit" class="btn btn-xs btn-info" ng-disabled="formatting" ng-click="formatYaml()" tooltip-placement="left" uib-tooltip="Output a YAML file for submitting a graph to cis_interface">
-            <i class="fa fa-fw" ng-class="{ 'fa-file-text-o': !formatting, 'fa-spinner fa-pulse': formatting }"></i> Produce YAML
-          </button>
-          
-          <button type="button" ng-if="false" class="btn btn-xs btn-primary" ng-disabled="running" ng-click="runGraph()" tooltip-placement="left" uib-tooltip="Submit this graph as a YAML to cis_interface and display the output">
-            <i class="fa fa-fw" ng-class="{ 'fa-play': !running, 'fa-spinner fa-pulse': running }"></i> Run Graph
-          </button>
-        </div>
+        <button class="btn btn-xs btn-danger" ng-click="clearGraph()" tooltip-placement="right" ng-disabled="selectedItem" uib-tooltip="Clear current graph from the canvas">
+          <i class="fa fa-fw fa-trash"></i>
+        </button>
+        
+        <button class="btn btn-xs btn-default" style="color:orange" ng-click="addInport()" ng-disabled="selectedItem" tooltip-placement="right" uib-tooltip="Add an InPort to current graph">
+          <i class="fa fa-fw fa-sign-in"></i> Add InPort
+        </button>
+        
+        <button class="btn btn-xs btn-default" style="color:green" ng-click="addOutport()" ng-disabled="selectedItem" tooltip-placement="right" uib-tooltip="Add an OutPort to current graph">
+          <i class="fa fa-fw fa-sign-out"></i> Add OutPort
+        </button>
       </div>
       
-      <div class="row border-cis" id="canvas-area">
-        <the-graph-editor class="the-graph-light" graph="state.graph" library="state.library" loading="state.loading" width="state.width" height="state.height"></the-graph-editor>
-         
-        <div ng-if="loading" id="loading" style="">
-          <i class="fa fa-fw fa-spinner fa-pulse"></i>
-          <div id="loading-message">loading custom elements...</div>
-        </div>
+      <!-- Outputs -->
+      <div class="pull-right">
+        <button class="btn btn-xs btn-default" ng-click="exportGraph()" tooltip-placement="left" uib-tooltip="View Raw JSON of the current graph">
+          <i class="fa fa-fw fa-code"></i> View Raw JSON
+        </button>
+        
+        <button type="submit" class="btn btn-xs btn-info" ng-disabled="formatting || selectedItem" ng-click="formatYaml()" tooltip-placement="left" uib-tooltip="Output a YAML file for submitting a graph to cis_interface">
+          <i class="fa fa-fw" ng-class="{ 'fa-file-text-o': !formatting, 'fa-spinner fa-pulse': formatting }"></i> Output YAML
+        </button>
+        
+        <button type="button" ng-if="false" class="btn btn-xs btn-primary" ng-disabled="running" ng-click="runGraph()" tooltip-placement="left" uib-tooltip="Submit this graph as a YAML to cis_interface and display the output">
+          <i class="fa fa-fw" ng-class="{ 'fa-play': !running, 'fa-spinner fa-pulse': running }"></i> Run Graph
+        </button>
       </div>
     </div>
     
-    <div id="editSidebar" class="col-sm-2" ng-if="selectedItem">
+    <div id="editSidebar" ng-if="selectedItem">
       <h4>{{ selectedItem.metadata.label || selectedItem.id }} Properties</h4>
-      <form name="editForm" ng-submit="saveEdit()">
+      <form role="form" name="editForm" ng-submit="saveEdit()">
         
         <!-- ID Field -->
         <div class="form-group" >

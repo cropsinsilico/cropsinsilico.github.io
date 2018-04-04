@@ -30,9 +30,9 @@
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.5",
     "ngreact": "0.5.1",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "the-graph": "0.10.3"
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "the-graph": "0.12.0"
   },
   "devDependencies": {
     "grunt": "1.0.1",

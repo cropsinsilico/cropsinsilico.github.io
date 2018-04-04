@@ -65,7 +65,7 @@
     </nav>
     
     <!-- Control Panel / Palette -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="editorContainer">
       <div ng-view></div>
     </div>
     
@@ -95,6 +95,7 @@
     <script src="node_modules/klayjs-noflo/klay-noflo.js"></script>
     <script src="node_modules/hammerjs/hammer.min.js"></script>
     <script src="node_modules/ngreact/ngReact.js"></script>
+    <script src="node_modules/the-graph/dist/vendor.js"></script>
     <script src="node_modules/the-graph/dist/the-graph.js"></script>
 
     <!-- Now load our app source -->
@@ -103,7 +104,8 @@
     <script src="app/cis.module.js"></script>
     <script src="app/editor.directive.js"></script>
     <script src="app/main/main.controller.js"></script>
-    <script src="app/main/modals/export.controller.js"></script>
+    <script src="app/main/modals/exportJson.controller.js"></script>
+    <script src="app/main/modals/generateYaml.controller.js"></script>
     <script src="app/swagger/swagger.controller.js"></script>
   </body>
 </html>

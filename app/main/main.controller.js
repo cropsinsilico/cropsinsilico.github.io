@@ -13,6 +13,8 @@ angular.module('cis')
   // Support new YAML format?
   $scope.useConnections = false;
   
+  $scope.showPalette = true;
+  
   // Load up an empty graph
   let fbpGraph = TheGraph.fbpGraph;
   
@@ -22,8 +24,8 @@ angular.module('cis')
   $scope.state = {
     graph: new fbpGraph.Graph(),
     loading: true,
-    height: height - (0.25 * height),
-    width: width - (0.220 * width),
+    height: height,
+    width: width,
     library: []
   };
   
@@ -36,16 +38,16 @@ angular.module('cis')
   /**
    * Window resize event handling
    */
-  /*angular.element($window).on('resize', function () {
+  angular.element($window).on('resize', function () {
     $scope.$apply(function() {
-      $scope.editorWidth = $window.innerWidth - 260;
-      $scope.editorHeight = $window.innerHeight - 200;
-      console.log(`Editor width/height: ${$scope.editorWidth}/${$scope.editorHeight}`);
+      $scope.state.width = $window.innerWidth;
+      $scope.state.height = $window.innerHeight;
+      console.log(`Editor width/height: ${$scope.state.width}/${$scope.state.height}`);
     });
   
     // manual $digest required as resize event is outside of angular
     $scope.$digest();
-  });*/
+  });
   
   let editValue = null;
   
@@ -316,48 +318,9 @@ angular.module('cis')
       });
     });
     
-    let toYaml = '';
-    if ($scope.useConnections) {
-        toYaml = { models: nodes, connections: connections };
-    } else {
-        toYaml = { models: nodes };
-        angular.forEach(toYaml.models, function(node) {
-          // Coerce to array if necessary
-          if (!angular.isArray(node.inputs)) {
-            node.inputs = [node.inputs]; 
-          }
-          if (!angular.isArray(node.outputs)) {
-            node.outputs = [node.outputs]; 
-          }
-          let transformedInputs = [];
-          angular.forEach(node.inputs, function(input) {
-            let edge = _.find(edges, function(edge) {
-              return edge.destination.label === input;
-            });
-            transformedInputs.push({
-              name: edge.destination.label,
-              driver: edge.type || 'RMQInputDriver',
-              args: edge.args || edge.id
-            });
-          });
-          let transformedOutputs = [];
-          angular.forEach(node.outputs, function(output) {
-            let edge = _.find(edges, function(edge) {
-              return edge.source.label === output;
-            });
-            transformedOutputs.push({
-              name: edge.source.label,
-              driver: edge.type || 'RMQOutputDriver',
-              args: edge.args || edge.id
-            });
-          });
-          
-          node.inputs = transformedInputs;
-          node.outputs = transformedOutputs;
-        });
-    }
+    let toYaml = { nodes: nodes, edges: edges, connections: connections };
     
-    console.log("Formatting YAML:", toYaml);
+    console.log("Submitting for formatting", toYaml);
     $scope.showResults({ title: "Formatted YAML", results: toYaml });
     
     /* TODO: Neutered this API call for now
@@ -399,15 +362,14 @@ angular.module('cis')
     // See 'app/dashboard/modals/logViewer/logViewer.html'
     $uibModal.open({
       animation: true,
-      templateUrl: 'app/main/modals/export.template.html',
-      controller: 'ExportCtrl',
+      templateUrl: 'app/main/modals/' + (params.isJson ? 'exportJson.template.html' : 'generateYaml.template.html'),
+      controller: params.isJson ? 'ExportJsonCtrl' : 'GenerateYamlCtrl',
       size: 'md',
       keyboard: false,      // Force the user to explicitly click "Close"
       backdrop: 'static',   // Force the user to explicitly click "Close"
       resolve: {
         results: () => params.results,
-        title: () => params.title || "View Details",
-        isJson: () => params.isJson || null
+        title: () => params.title || "View Details"
       }
     });
   };
