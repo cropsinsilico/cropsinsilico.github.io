@@ -589,7 +589,7 @@ module.exports.register = function (context) {
             menu: menu,
             options: options,
             triggerHideContext: hide,
-            label: "Hello",
+            label: "Graph",
             graph: this.props.graph,
             node: this,
             ports: [],

@@ -33,7 +33,7 @@
     "ngreact": "0.5.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "the-graph": "git+https://github.com/bodom0015/the-graph#increase-port-size"
+    "the-graph": "git+https://github.com/bodom0015/the-graph#master"
   },
   "devDependencies": {
     "grunt": "1.0.1",
