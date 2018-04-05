@@ -5,7 +5,7 @@ Prototype UI for Crops in Silico
 For design notes and mockups, see https://opensource.ncsa.illinois.edu/confluence/display/~lambert8/CiS+UI+Requirements
 
 ## Live Demo
-See https://proto.cis.ndslabs.org
+See https://cropsinsilico.github.io/
 
 
 # Prerequisites
