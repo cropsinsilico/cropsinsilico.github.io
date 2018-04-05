@@ -160,13 +160,13 @@ module.exports.register = function (context) {
         var fontSize = 6 * (30 / (4 * this.props.label.length));
         style = { 'fontSize': fontSize+'px' };
       }
-      var r = 4;
+      var r = 6;
       // Highlight matching ports
       var highlightPort = this.props.highlightPort;
       var inArc = arcs.inport;
       var outArc = arcs.outport;
       if (highlightPort && highlightPort.isIn === this.props.isIn && (highlightPort.type === this.props.port.type || this.props.port.type === 'any')) {
-        r = 6;
+        r = 10;
         inArc = arcs.inportBig;
         outArc = arcs.outportBig;
       }

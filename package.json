@@ -4,7 +4,8 @@
   "description": "Crops in Silico User Interface",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd node_modules/the-graph && npm install && grunt build && cd ../.."
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,7 @@
     "ngreact": "0.5.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "the-graph": "0.12.0"
+    "the-graph": "git+https://github.com/bodom0015/the-graph#increase-port-size"
   },
   "devDependencies": {
     "grunt": "1.0.1",
