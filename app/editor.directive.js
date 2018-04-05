@@ -211,6 +211,16 @@ angular.module('cis')
                 $log.debug("Library changed... reloading!", newValue);
                 render();
             });
+            
+            scope.$watchCollection("graph.nodes", function(newValue, oldValue) {
+                $log.debug("Nodes changed... reloading!", newValue);
+                render();
+            });
+            
+            scope.$watchCollection("graph.edges", function(newValue, oldValue) {
+                $log.debug("Edges changed... reloading!", newValue);
+                render();
+            });
         }
     }
 }])
