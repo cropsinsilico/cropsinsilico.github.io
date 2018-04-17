@@ -114,11 +114,11 @@ angular.module('cis')
                   iconLabel: "delete",
                   action: deleteEdge
                 },
-                /*e4: {
+                e4: {
                   icon: "edit",
                   iconLabel: "edit",
                   action: editEdge
-                }*/
+                }
               },
               node: {
                 s4: {
