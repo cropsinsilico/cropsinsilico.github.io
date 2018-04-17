@@ -23,32 +23,83 @@
         ],
         "outports": []
     },
-    "cmodela": {
-        "name": "cmodela",
-        "label": "C Model A",
-        "description": "A model written in C",
-        "icon": "code",
+    "canopy": {
+        "name": "canopy",
+        "label": "Canopy",
+        "description": "Canopy Model",
+        "icon": "umbrella",
         "driver": "GCCModelDriver",
-        "args": "./src/gs_lesson5_modelA.c",
+        "args": "./src/canopy.cpp",
         "inports": [
-            {"name": "inputa", "label": "inputA", "type": "all"}
+            {"name": "plant_layout", "label": "plant_layout", "type": "all"},
+            {"name": "init_canopy_structure", "label": "init_canopy_structure", "type": "all"},
+            {"name": "growth_rate", "label": "growth_rate", "type": "all"},
+            {"name": "time", "label": "time", "type": "all"}
         ],
         "outports": [
-            {"name": "outputa", "label": "outputA", "type": "all"}
+            {"name": "canopy_structure", "label": "canopy_structure", "type": "all"}
         ]
     },
-    "cmodelb": {
-        "name": "cmodelb",
-        "label": "C Model B",
-        "description": "A model written in C",
-        "icon": "code",
-        "driver": "GCCModelDriver",
-        "args": "./src/gs_lesson5_modelB.c",
+    "growth": {
+        "name": "growth",
+        "label": "GrowthMat",
+        "description": "Growth Model (MATLAB)",
+        "icon": "pagelines",
+        "driver": "MatlabModelDriver",
+        "args": "./src/growth.m",
         "inports": [
-            {"name":"inputb", "label": "inputB", "type": "all"}
+            {"name": "photosynthesis_rate", "label": "photosynthesis_rate", "type": "all"}
         ],
         "outports": [
-            {"name": "outputb", "label": "outputB", "type": "all"}
+            {"name": "growth_rate", "label": "growth_rate", "type": "all"}
+        ]
+    },
+    "growthpy": {
+        "name": "growthpy",
+        "label": "GrowthPy",
+        "description": "Growth Model (Python)",
+        "icon": "pagelines",
+        "driver": "PythonModelDriver",
+        "args": "./src/growth.py",
+        "inports": [
+            {"name": "photosynthesis_rate", "label": "photosynthesis_rate", "type": "all"}
+        ],
+        "outports": [
+            {"name": "growth_rate", "label": "growth_rate", "type": "all"}
+        ]
+    },
+    "light": {
+        "name": "light",
+        "label": "Light",
+        "description": "Light Model",
+        "icon": "sun-o",
+        "driver": "GCCModelDriver",
+        "args": [
+            "./src/light.c",
+            "-lm"
+        ],
+        "inports": [
+            {"name": "ambient_light", "label": "ambient_light", "type": "all"},
+            {"name": "canopy_structure", "label": "canopy_structure", "type": "all"}
+        ],
+        "outports": [
+            {"name": "light_intensity", "label": "light_intensity", "type": "all"}
+        ]
+    },
+    "photosynthesis": {
+        "name": "photosynthesis",
+        "label": "PhotoSyn",
+        "description": "Photosynthesis Model",
+        "icon": "exchange",
+        "driver": "PythonModelDriver",
+        "args": "./src/photosynthesis.py",
+        "inports": [
+            {"name": "light_intensity", "label": "light_intensity", "type": "all"},
+            {"name": "temperature", "label": "temperature", "type": "all"},
+            {"name": "co2", "label": "co2", "type": "all"}
+        ],
+        "outports": [
+            {"name": "photosynthesis_rate", "label": "photosynthesis_rate", "type": "all"}
         ]
     }
 }
