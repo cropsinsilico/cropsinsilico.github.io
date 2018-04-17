@@ -227,8 +227,8 @@ angular.module('cis')
       let model = getModelFromNode(node);
       
       // TODO: Read ModelDriver / args from model object
-      let args = model.args || 'placeholder';
-      let driver = model.driver || 'PlaceholderModelDriver';
+      let args = model.args;
+      let driver = model.driver;
       
       let inputs = [];
       if (model.inports.length > 1) {
@@ -311,11 +311,24 @@ angular.module('cis')
         destination: dest_port,
         //description: node.metadata.description,
       });
-      
-      connections.push({
+      let connection = {
         input: src_port.label || src_node.metadata.name,
         output: dest_port.label || dest_node.metadata.name
-      });
+      };
+      
+      if (src_node.metadata['read_meth']) {
+        connection['read_meth'] = src_node.metadata['read_meth']
+      }
+      
+      if (dest_node.metadata['write_meth']) {
+        connection['write_meth'] = dest_node.metadata['write_meth']
+      }
+      
+      if (edge.metadata['field_names']) {
+        connection['field_names'] = edge.metadata['field_names']
+      }
+      
+      connections.push(connection);
     });
     
     let toYaml = { nodes: nodes, edges: edges, connections: connections };
