@@ -140,6 +140,7 @@ angular.module('cis')
   $scope.clearGraph = function() {
     let result = confirm("Are you sure you want to clear your canvas?\nAll saved graph data will be cleared.");
     return result && ($scope.state.graph = new fbpGraph.Graph());
+    $scope.saveGraph();
   };
   
   /** Adds an inport to the current graph */
@@ -190,9 +191,6 @@ angular.module('cis')
   /** Exports the current graph to JSON */
   $scope.exportGraph = function() {
     $scope.showResults({ results: $scope.state.graph.toJSON(), title: "View Raw Graph", isJson: true });
-    
-    // FIXME: Make this a modal or something prettier.
-    // See https://github.com/nds-org/ndslabs/blob/master/gui/dashboard/catalog/modals/export/exportSpec.html
   };
   
   $scope.formatting = false;
@@ -218,7 +216,6 @@ angular.module('cis')
     
     // Format nodes as the API expects
     let nodes = [];
-    let nodeCount = 1;
     $log.debug("Transforming nodes: ", $scope.state.graph.nodes);
     angular.forEach($scope.state.graph.nodes, function(node) {
       if (node.component === 'inport' || node.component === 'outport') {
@@ -232,14 +229,14 @@ angular.module('cis')
       
       let inputs = [];
       if (model.inports.length > 1) {
-        angular.forEach(model.inports, function(item) { inputs.push(item.name); });
+        angular.forEach(model.inports, function(item) { inputs.push(item.label || item.name); });
       } else if (model.inports.length === 1)  {
         inputs = model.inports[0].label;
       }
       
       let outputs = [];
       if (model.outports.length > 1) {
-        angular.forEach(model.outports, function(item) { outputs.push(item.name); });
+        angular.forEach(model.outports, function(item) { outputs.push(item.label || item.name); });
       } else if (model.outports.length === 1) {
         outputs = model.outports[0].label;
       }
@@ -326,6 +323,10 @@ angular.module('cis')
       
       if (edge.metadata['field_names']) {
         connection['field_names'] = edge.metadata['field_names']
+      }
+      
+      if (edge.metadata['field_units']) {
+        connection['field_units'] = edge.metadata['field_units']
       }
       
       connections.push(connection);
