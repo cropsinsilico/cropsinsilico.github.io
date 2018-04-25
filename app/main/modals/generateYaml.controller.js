@@ -18,7 +18,7 @@ angular
   $scope.title = title;
   $scope.results = angular.copy(results);
   
-  $scope.legacyMode = true;
+  $scope.legacyMode = false;
   
   $scope.reformat = function(legacy) {
     let toYaml = { models: angular.copy(results.nodes) };
