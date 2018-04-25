@@ -19,9 +19,9 @@
   <div class="modal-footer">
     <div class="row">
       <div class="pull-left">
-        <button class="btn btn-default" ng-click="legacyMode = !legacyMode"
+        <button class="btn btn-default" ng-hide="true" ng-click="legacy = !legacy"
             tooltip-placement="right" uib-tooltip="Disabling legacy mode will format YAML using the new 'connections' style for cisrun">
-          <i class="fa fa-fw" ng-class="{ 'fa-check-square': legacyMode, 'fa-square': !legacyMode }"></i> Legacy Mode
+          <i class="fa fa-fw" ng-class="{ 'fa-check-square': legacyMode, 'fa-square': !legacyMode }"></i> Legacy
         </button>
       </div>
       <div class="pull-right">
