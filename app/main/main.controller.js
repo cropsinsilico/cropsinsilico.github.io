@@ -241,7 +241,7 @@ angular.module('cis')
         outputs = model.outports[0].label;
       }
       
-      nodes.push({
+      let newModel = {
         //id: nodeCount++, //node.id, 
         //model: model,
         name: node.id,
@@ -250,7 +250,13 @@ angular.module('cis')
         inputs: inputs,
         outputs: outputs
         //description: node.metadata.description,
-      });
+      };
+      
+      if (model.cmakeargs) { newModel.cmakeargs = model.cmakeargs }
+      if (model.makefile) { newModel.makefile = model.makefile }
+      if (model.makedir) { newModel.makedir = model.makedir }
+      
+      nodes.push(newModel);
     });
     
     // Format edges as the API expects
