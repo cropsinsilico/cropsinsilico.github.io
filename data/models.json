@@ -146,13 +146,13 @@
         "args": [
             "cis_ray",
             "-a nofile",
-            "-o {{ FOUT }}",
-            "-f {{ START_HR }}",
-            "-e {{ END_HR }}",
-            "-i {{ STEP_HR }}",
-            "-r {{ RAY_DIST }}",
-            "-l {{ TRANSMITTANCE }}",
-            "-j {{ REFLECTIVITY }}"
+            "-o output.txt",
+            "-f 12",
+            "-e 12",
+            "-i 1",
+            "-r 0.1",
+            "-l 0.075",
+            "-j 0.075"
         ],
         "cmakeargs": "-DCISRUN:BOOL=ON",
         "inports": [
