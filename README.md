@@ -53,3 +53,8 @@ grunt swagger
 
 Ensure that the client and server always have matching API specs.
 
+## Rebuilding Jekyll Locally
+Execute the following command to run a `jekyll` development server:
+```bash
+docker rm -f cis-jekyll; docker run -d --name=cis-jekyll --label=jekyll --volume=$(pwd):/srv/jekyll  -it -p 127.0.0.1:4000:4000 -p 127.0.0.1:35729:35729 jekyll/jekyll jekyll server --watch --livereload && docker logs -f cis-jekyll
+```
