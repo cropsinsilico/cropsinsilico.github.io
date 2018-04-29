@@ -18,7 +18,7 @@ angular
   $scope.title = title;
   $scope.results = angular.copy(results);
   
-  $scope.legacyMode = false;
+  $scope.legacy = false;
   
   $scope.reformat = function(legacy) {
     let toYaml = { models: angular.copy(results.nodes) };
@@ -66,7 +66,8 @@ angular
       alert('Sorry, copy to clipboard is not supported');
       return;
     }
-    clipboard.copyText($scope.formatted);
+    let formatted = $scope.reformat($scope.legacy);
+    clipboard.copyText(formatted);
   };
 
   $scope.close = function() {
