@@ -1,60 +1,17 @@
-# Crops in Silico Prototype UI
-Prototype UI for Crops in Silico
+# Crops in Silico UI
+Model Composer UI for the Crops in Silico project
 
-# Design
-For design notes and mockups, see https://opensource.ncsa.illinois.edu/confluence/display/~lambert8/CiS+UI+Requirements
+# Overview
+The Model Composer is a tool for composing systems of models built using the 
+[cis_interface](https://github.com/cropsinsilico/cis_interface) framework.
 
-## Live Demo
+# Live Demo
 See https://cropsinsilico.github.io/
 
+# Usage
+For documentation on using the Model Composer UI, please see the
+[User's Guide](USER-GUIDE.md)
 
-# Prerequisites
-* Git
-* Docker
-
-Clone this repo:
-```bash
-git clone https://github.com/bodom0015/cis-ui && cd cis-ui
-```
-
-# Build
-Build the webserver Docker image:
-```bash
-docker build -t cis/ui .
-```
-
-# Run
-Start a development webserver on port `8080`:
-```bash
-docker run -it -p 8080:80 --name=cis-ui -v $(pwd):/usr/nginx/share/html cis/ui
-```
-
-## Without Docker
-You will need to install NodeJS and run the following:
-```bash
-npm start
-```
-
-# Develop
-Start an IDE on port `8081`:
-```bash
-docker run -it -p 8081:80 --name=cloud9-cis -v $(pwd):/workspace -w /workspace ndslabs/cloud9-nodejs
-```
-
-## Regenerate API client
-If you modify the [swagger spec](app/swagger.yaml), you'll need to regenerate the API client.
-
-A `grunt` task has been provided to do this for you:
-```bash
-npm install -g grunt
-npm install
-grunt swagger
-```
-
-Ensure that the client and server always have matching API specs.
-
-## Rebuilding Jekyll Locally
-Execute the following command to run a `jekyll` development server:
-```bash
-docker rm -f cis-jekyll; docker run -d --name=cis-jekyll --label=jekyll --volume=$(pwd):/srv/jekyll  -it -p 127.0.0.1:4000:4000 -p 127.0.0.1:35729:35729 jekyll/jekyll jekyll server --watch --livereload && docker logs -f cis-jekyll
-```
+# Developing
+For documentation on developing the Model Composer UI, please see the
+[Developer's Guide](DEVELOPER-GUIDE.md)
