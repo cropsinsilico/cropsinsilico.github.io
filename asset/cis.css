@@ -17,6 +17,7 @@ body {
   overflow: hidden;
 }
 .navbar {
+  /*background-color: #e8e8e8;*/
   margin-bottom: 0;
   border-radius: 0;
   z-index:1001;
