@@ -4,12 +4,23 @@ document details the usage of the User Interface. If any of the steps described
 in this document are unclear or confusing, please direct your questions to
 [Crops in Silico Support](mailto:lambert8@illinois.edu)
 
-# Orientation
+# Model Composer UI
+The Model Composer UI consists of several smaller components:
 * Navbar
 * Model Library (aka "Palette")
 * Button Bar
 * Canvas (aka "The Graph")
 * Context Menu + Edit Sidebar
+
+The Navbar runs along the top of the UI and contains the Crops in Silico brand
+name and logo. On the left side, you will find a link to submit a new model.
+On the right side, you will also find the `Help` dropdown which contains links
+to this user guide, the developer's guide, the documentation for the `cisrun`
+CLI tool.
+
+The Model Library is collapsible, and can be found on the left side of the view.
+This consists of a simple table listing of the existing models that the systems
+knows about.
 
 # Adding a Node
 The Model Library on the left side offers an "Add" button beside each model.
@@ -37,11 +48,7 @@ InPorts/OutPorts, and Edges.
 
 ## Nodes
 Right-clicking a node will bring up the context menu, and allows you to delete the node or edit its metadata:
-* ID (read-only): auto-generated pseudo-unique string identifier for this node
-* Model (read-only): the underlying model that this node represents
 * Label (optional): The identifier for this node that will appear in the canvas
-* X (required): Current X coordinate of this Node on the canvas
-* Y (required): Current Y coordinate of this Node on the canvas
 
 You should also see the model inputs/ouputs displayed with the context menu
 open. Just to the left of the context menu, you should see any inputs offered 
@@ -50,14 +57,10 @@ select an input or output and connect it to another model.
 
 ## InPorts / OutPorts
 Right-clicking an InPort or OutPort will bring up the context menu, and allows you to delete it or edit its metadata:
-* ID (read-only): auto-generated pseudo-unique string identifier for this node
-* Model (read-only): the underlying model that this node represents
 * Label (optional): The identifier for this node that will appear in the canvas
 * Type (required): The type of this port - this can be either "File" or "Queue" (if using AMQP queues)
 * Value (required): The value of this port - this will either be a filepath (for Type=File) or a queue name (for Type=Queue)
 * Read/Write Method (optional): how are the contents formatted? can be any of 'table', 'table_array', 'pandas' or 'line'
-* X (required): Current X coordinate of this Node on the canvas
-* Y (required): Current Y coordinate of this Node on the canvas
 
 ## Edges
 Right-clicking an edge will bring up the context menu, and allows you to delete the edge or edit its metadata:
@@ -66,9 +69,9 @@ Right-clicking an edge will bring up the context menu, and allows you to delete 
 * Field Units (optional): If this edge contains multiple fields, you can specify their units as a comma-separated list of values
 
 # Submitting a New Model
-Do you have a new model that you would like to contribute? [The link in the
-Navbar](https://goo.gl/forms/AcEhlzvNFsaVAg3H3) will allow you to submit a request for supporting a new model in the
-Model Composer UI.
+Do you have a new model that you would like to contribute? The Navbar offers a
+[link](https://goo.gl/forms/AcEhlzvNFsaVAg3H3) will allow you to submit a 
+request for supporting a new model in the Model Composer UI.
 
 Simply click the link and fill out the Google Form. This
 will submit a New Issue to our GitHub repository, and we will reach to let you

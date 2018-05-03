@@ -10,8 +10,8 @@ See https://cropsinsilico.github.io/
 
 # Usage
 For documentation on using the Model Composer UI, please see the
-[User's Guide](USER-GUIDE.md)
+[User Guide](USER-GUIDE.md)
 
 # Developing
 For documentation on developing the Model Composer UI, please see the
-[Developer's Guide](DEVELOPER-GUIDE.md)
+[Developer Guide](DEVELOPER-GUIDE.md)
