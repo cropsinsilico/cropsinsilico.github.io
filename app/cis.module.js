@@ -7,7 +7,7 @@ angular.module('cis', [ 'ngMessages', 'ngRoute', 'cis-api',
   'angular-clipboard', 'ui.bootstrap', 'ui.slider', 'swaggerUi' ])
 
 /** Enable DEBUG mode? */
-.constant('DEBUG', true)
+.constant('DEBUG', false)
 
 /** Set up our connection to the API server */
 .constant('ApiUri', '/api/v1')
