@@ -25,7 +25,7 @@ body {
 .brand-link, .navbar-text, .dropdown-toggle {
   cursor: pointer;
 }
-#libraryHeader {
+.libraryHeader {
   margin-left: 5px;
 }
 #editorContainer {
@@ -49,6 +49,9 @@ body {
   right: 15vw; 
   top: 50px;
 }
+#editSidebarContents {
+  overflow-y: auto;
+}
 #editSidebar {
   background-color: #f8f8f8;
   border-radius: 10px 0 0 10px;
@@ -58,7 +61,6 @@ body {
   position: fixed;
   right: 0;
   top: 20%;
-  overflow-y: auto;
 }
 .app-svg {
   position: fixed !important;

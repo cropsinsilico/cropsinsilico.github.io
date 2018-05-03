@@ -55,7 +55,7 @@ angular.module('cis')
   $scope.selectedItem = null;
   $scope.$watch(function() { return TheGraphSelection.selection; }, function(newValue, oldValue) {
     $scope.selectedItem = newValue;
-    if (!oldValue && newValue) {
+    if (!oldValue && newValue && oldValue !== newValue) {
       // Clear out existing transaction if it was not saved
       if (editValue !== null) {
         $scope.cancelEdit();
@@ -63,6 +63,18 @@ angular.module('cis')
       // Start a new transaction
       $scope.state.graph.startTransaction("edit");
       editValue = angular.copy(newValue);
+      
+      /*$uibModal.open({
+        animation: true,
+        templateUrl: 'app/main/modals/editSelection.template.html',
+        controller: 'EditSelectionCtrl',
+        size: 'md',
+        keyboard: false,      // Force the user to explicitly click "Close"
+        backdrop: 'static',   // Force the user to explicitly click "Close"
+        resolve: {
+          selectedItem: () => angular.copy(newValue)
+        }
+      });*/
     }
   });
   
@@ -157,7 +169,21 @@ angular.module('cis')
   
   /** Simple filter function */
   $scope.getModelOptions = function(library) {
+    if (!library || !Object.keys(library).length) {
+      return []
+    }
     return _.omit(library, ['inport', 'outport']);
+  };
+  
+  /** Simple filter function */
+  $scope.getDataOptions = function(library) {
+    if (!library || !Object.keys(library).length) {
+      return []
+    }
+    let inport = _.find(library, ['name', 'inport']);
+    let outport = _.find(library, ['name', 'outport']);
+    return [inport, outport]
+    
   };
   
   /** Simple random function */
@@ -244,7 +270,7 @@ angular.module('cis')
       let newModel = {
         //id: nodeCount++, //node.id, 
         //model: model,
-        name: node.id,
+        name: model.label || model.name || node.id,
         args: args,
         driver: driver,
         inputs: inputs,
@@ -255,6 +281,9 @@ angular.module('cis')
       if (model.cmakeargs) { newModel.cmakeargs = model.cmakeargs }
       if (model.makefile) { newModel.makefile = model.makefile }
       if (model.makedir) { newModel.makedir = model.makedir }
+      if (model.sourcedir) { newModel.sourcedir = model.sourcedir }
+      if (model.builddir) { newModel.builddir = model.builddir }
+      if (model.preserve_cache) { newModel.preserve_cache = model.preserve_cache }
       
       nodes.push(newModel);
     });
@@ -341,7 +370,7 @@ angular.module('cis')
     let toYaml = { nodes: nodes, edges: edges, connections: connections };
     
     console.log("Submitting for formatting", toYaml);
-    $scope.showResults({ title: "Formatted YAML", results: toYaml });
+    $scope.showResults({ title: "Formatted Manifest", results: toYaml });
     
     /* TODO: Neutered this API call for now
     $scope.formatting = true;
@@ -379,7 +408,6 @@ angular.module('cis')
    * @param {} isJson - if false, format as YAML
    */ 
   $scope.showResults = function(params) { 
-    // See 'app/dashboard/modals/logViewer/logViewer.html'
     $uibModal.open({
       animation: true,
       templateUrl: 'app/main/modals/' + (params.isJson ? 'exportJson.template.html' : 'generateYaml.template.html'),
