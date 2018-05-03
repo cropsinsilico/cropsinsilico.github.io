@@ -2,7 +2,7 @@
     "inport": {
         "name": "inport",
         "label": "InPort",
-        "description": "An input port for the graph",
+        "description": "Graph Input",
         "icon": "sign-in",
         "driver": "GCCModelDriver",
         "args": "unused",
@@ -14,7 +14,7 @@
     "outport": {
         "name": "outport",
         "label": "OutPort",
-        "description": "An output port for the graph",
+        "description": "Graph Output",
         "icon": "sign-out",
         "driver": "GCCModelDriver",
         "args": "unused",
@@ -22,85 +22,6 @@
             {"name": "value", "type": "all"}
         ],
         "outports": []
-    },
-    "canopy": {
-        "name": "canopy",
-        "label": "Canopy",
-        "description": "Canopy Model",
-        "icon": "umbrella",
-        "driver": "GCCModelDriver",
-        "args": "./src/canopy.cpp",
-        "inports": [
-            {"name": "plant_layout", "label": "plant_layout", "type": "all"},
-            {"name": "init_canopy_structure", "label": "init_canopy_structure", "type": "all"},
-            {"name": "growth_rate", "label": "growth_rate", "type": "all"},
-            {"name": "time", "label": "time", "type": "all"}
-        ],
-        "outports": [
-            {"name": "canopy_structure", "label": "canopy_structure", "type": "all"}
-        ]
-    },
-    "growth": {
-        "name": "growth",
-        "label": "GrowthMat",
-        "description": "Growth Model (MATLAB)",
-        "icon": "pagelines",
-        "driver": "MatlabModelDriver",
-        "args": "./src/growth.m",
-        "inports": [
-            {"name": "photosynthesis_rate", "label": "photosynthesis_rate", "type": "all"}
-        ],
-        "outports": [
-            {"name": "growth_rate", "label": "growth_rate", "type": "all"}
-        ]
-    },
-    "growthpy": {
-        "name": "growthpy",
-        "label": "GrowthPy",
-        "description": "Growth Model (Python)",
-        "icon": "pagelines",
-        "driver": "PythonModelDriver",
-        "args": "./src/growth.py",
-        "inports": [
-            {"name": "photosynthesis_rate", "label": "photosynthesis_rate", "type": "all"}
-        ],
-        "outports": [
-            {"name": "growth_rate", "label": "growth_rate", "type": "all"}
-        ]
-    },
-    "light": {
-        "name": "light",
-        "label": "Light",
-        "description": "Light Model",
-        "icon": "sun-o",
-        "driver": "GCCModelDriver",
-        "args": [
-            "./src/light.c",
-            "-lm"
-        ],
-        "inports": [
-            {"name": "ambient_light", "label": "ambient_light", "type": "all"},
-            {"name": "canopy_structure", "label": "canopy_structure", "type": "all"}
-        ],
-        "outports": [
-            {"name": "light_intensity", "label": "light_intensity", "type": "all"}
-        ]
-    },
-    "photosynthesis": {
-        "name": "photosynthesis",
-        "label": "PhotoSyn",
-        "description": "Photosynthesis Model",
-        "icon": "exchange",
-        "driver": "PythonModelDriver",
-        "args": "./src/photosynthesis.py",
-        "inports": [
-            {"name": "light_intensity", "label": "light_intensity", "type": "all"},
-            {"name": "temperature", "label": "temperature", "type": "all"},
-            {"name": "co2", "label": "co2", "type": "all"}
-        ],
-        "outports": [
-            {"name": "photosynthesis_rate", "label": "photosynthesis_rate", "type": "all"}
-        ]
     },
     "grcm": {
         "name": "grcm",
@@ -110,7 +31,7 @@
         "driver": "ModelDriver",
         "args": [
             "python",
-            "./src/GrCM_plain.py"
+            "../GrCM/src/GrCM_plain.py"
         ],
         "inports": [
             {"name": "grcm_input1", "label": "GrCM_input1", "type": "all"},
@@ -126,7 +47,7 @@
         "description": "Metabolic Model",
         "icon": "cutlery",
         "driver": "MatlabModelDriver",
-        "args": "./src/MeM_alone.m",
+        "args": "../MeM/src/MeM_alone.m",
         "inports": [
             {"name": "mem_input1", "label": "MeM_input1", "type": "all"},
             {"name": "mem_input2", "label": "MeM_input2", "type": "all"},
@@ -141,8 +62,9 @@
         "name": "rtr",
         "label": "RTr",
         "description": "RayTracer Model",
-        "icon": "lightbulb-o",
+        "icon": "sun-o",
         "driver": "CMakeModelDriver",
+        "sourcedir": "../../clever_raytracer_name",
         "args": [
             "cis_ray",
             "-a nofile",
@@ -165,11 +87,11 @@
     "lem": {
         "name": "lem",
         "label": "LeM",
-        "description": "Leaf Model",
+        "description": "Growth Model",
         "icon": "leaf",
         "driver": "MakeModelDriver",
-        "makedir": ".",
-        "makefile": "./src/LeMMakeFile",
+        "makedir": "./LeM",
+        "makefile": "../LeM/src/LeMMakeFile",
         "args": "LeM",
         "inports": [
             {"name": "lem_input1", "label": "LeM_input1", "type": "all"},
