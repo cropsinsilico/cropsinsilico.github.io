@@ -6,7 +6,7 @@ angular
 .factory('jsyaml', [() => window.jsyaml])
 
 /**
- * The Controller for our "Export Spec" Modal Window
+ * The Controller for our "Export JSON" Modal Window
  * 
  * @author lambert8
  * @see https://opensource.ncsa.illinois.edu/confluence/display/~lambert8/3.%29+Controllers%2C+Scopes%2C+and+Partial+Views
