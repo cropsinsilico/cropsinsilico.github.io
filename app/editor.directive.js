@@ -54,29 +54,8 @@ angular.module('cis')
               });
             };
             let contextMenus = {
-              main: {
-                icon: "sitemap",
-                e4: {
-                  icon: "paste",
-                  iconLabel: "paste",
-                  action: function (graph, itemKey, item) {
-                    // FIXME: Clipboard
-                    let pasted = Clipboard.paste(graph);
-                    this.selectedNodes = pasted.nodes;
-                    this.selectedEdges = [];
-                  }
-                }
-              },
-              selection: {
-                icon: "th",
-                w4: {
-                  icon: "copy",
-                  iconLabel: "copy",
-                  action: function (graph, itemKey, item) {
-                    Clipboard.copy(graph, item.nodes);
-                  }
-                }
-              },
+              main: null,
+              selection: null,
               nodeInport: null,
               nodeOutport: null,
               graphInport: {
@@ -160,30 +139,37 @@ angular.module('cis')
                 
                 let props = {
                     readonly: false,
-                    height: scope.height,
-                    width: scope.width,
+                    height: $window.innerHeight + 50,
+                    width: $window.innerWidth,
                     graph: scope.graph,
                     menus: contextMenus,
                     library: scope.library,
                 };
                 $log.info('rendering', props);
                 
+                // Save internal state
                 let editor = element;
                 editor.width = props.width;
                 editor.height = props.height;
+                
+                // FIXME: This seems to work despite many errors in the console
+                //ReactDOM.unmountComponentAtNode(editor);
+                
+                window.removeEventListener('resize', render);
                 let reactEle = React.createElement(TheGraph.App, props);
                 ReactDOM.render(reactEle, editor);
-                
+            
             };
             
             //scope.graph.on('endTransaction', render); // graph changed
-            //window.addEventListener("resize", render);
+            window.addEventListener("resize", render);
             
             // Re-render if the graph changes
             scope.$watch("graph", function(newValue, oldValue) { 
                 // Check that new graph is valid
                 if (newValue.nodes && newValue.nodes.length) {
-                    $log.debug("Graph changed... rendering", newValue);
+                    $log.warn("Graph changed... rendering", newValue);
+                    $log.warn("Old value was:", oldValue);
                     
                     // Check if new graph has been loaded before component library
                     if (!scope.library || !Object.keys(scope.library).length) {
@@ -206,6 +192,30 @@ angular.module('cis')
                 // manual $digest required as resize event is outside of angular
                 scope.$digest();
             });
+            
+            // Detect when the parent's dimensions change and resize accordingly
+            // FIXME: This seems hacky, but nothing else seemed to work
+            scope.$watch(
+                function () { 
+                    return {
+                       width: $window.innerWidth,
+                       height: $window.innerHeight,
+                    }
+               },
+               function (newValue, oldValue) {
+                  // Only rerender when dimensions actually change
+                  if (!newValue || !newValue.width || !newValue.height 
+                      || (newValue.width === oldValue.width 
+                        && newValue.height === oldValue.height)) {
+                    return;
+                  }
+                  let w = scope.width = $window.innerWidth;
+                  let h = scope.height = $window.innerHeight;
+                  $log.warn(`Resize event detected: ${w}x${h}... reloading!`);
+                  render();
+               }, //listener 
+               true //deep watch
+            );
             
             scope.$watchCollection("library", function(newValue, oldValue) {
                 $log.debug("Library changed... reloading!", newValue);
