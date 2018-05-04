@@ -60,7 +60,7 @@
     },
     "rtr": {
         "name": "rtr",
-        "label": "RTr",
+        "label": "RayTracer",
         "description": "RayTracer Model",
         "icon": "sun-o",
         "driver": "CMakeModelDriver",

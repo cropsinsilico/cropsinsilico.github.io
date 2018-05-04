@@ -151,8 +151,11 @@ angular.module('cis')
   /** Clears out the current graph, returns true if cleared */
   $scope.clearGraph = function() {
     let result = confirm("Are you sure you want to clear your canvas?\nAll saved graph data will be cleared.");
-    return result && ($scope.state.graph = new fbpGraph.Graph());
-    $scope.saveGraph();
+    if (result) {
+      $scope.state.graph = new fbpGraph.Graph();
+      $scope.saveGraph();
+    }
+    return result
   };
   
   /** Adds an inport to the current graph */
