@@ -27,7 +27,7 @@
         "name": "grcm",
         "label": "GrCM",
         "description": "Gene Expression Model",
-        "icon": "intersex",
+        "icon": "pagelines",
         "driver": "ModelDriver",
         "args": [
             "python",
@@ -45,7 +45,7 @@
         "name": "mem",
         "label": "MeM",
         "description": "Metabolic Model",
-        "icon": "cutlery",
+        "icon": "share-alt",
         "driver": "MatlabModelDriver",
         "args": "../MeM/src/MeM_alone.m",
         "inports": [
