@@ -1,4 +1,4 @@
-# CiS UI Development Environment
+# Developer Guide
 The following commands should help you get a development environment 
 up and running for modifying the Crops in Silico Model Composer UI
 
