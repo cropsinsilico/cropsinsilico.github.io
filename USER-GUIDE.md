@@ -57,7 +57,7 @@ chosen. Once added, you can left-click this node and hold to drag it around the
 canvas. On the new node, you should see grey dots on the left/right sides - these
 are the inputs (left side) and outputs (right side) that this model accepts.
 
-For more details, see the documentation for [https://cropsinsilico.github.io/cis_interface/getting_started.html#model-file-input-output](Model file input/output)
+For more details, see the documentation for [Model file input/output](https://cropsinsilico.github.io/cis_interface/getting_started.html#model-file-input-output)
 
 ## Adding an Edge
 To create an edge, simply click on an output on a model - this should
@@ -67,7 +67,7 @@ another model. You can also choose an input first and connect that to an output.
 NOTE: Inputs can only be connected to outputs and vice versa. An input cannot be
 connected to another input. An output cannot be connected with another output.
 
-For more details, see the documentation for [https://cropsinsilico.github.io/cis_interface/getting_started.html#model-to-model-communication-with-connections](Model-to-model communication)
+For more details, see the documentation for [Model-to-model communication](https://cropsinsilico.github.io/cis_interface/getting_started.html#model-to-model-communication-with-connections)
 
 ## Adding an InPort / OutPort
 While each node has its own set of inputs and outputs, the entire graph likely
