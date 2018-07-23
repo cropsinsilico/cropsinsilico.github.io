@@ -109,9 +109,9 @@ Simply `Log In` at the top-right, then click `Submit a New Model` at the top-lef
 A pop-up should appear allowing you to enter all necessary metadata fields of you model.
 Once created, your model appears in your personal catalog for testing and debugging.
 
-## Official Submission a Model
-When you are satisfied with the working state of your model, you can submit it as 
-an issue or pull request to the official [cis-specs](https://github.com/cropsinsilico/cis-specs) 
+## Official Model Submission
+When you are satisfied with the working state of your model, you can submit it to our official  
+catalog as an issue or pull request to the [cis-specs](https://github.com/cropsinsilico/cis-specs) 
 repository. Here it will go through a peer review process where it will be testing and vetted. 
 If it passes the review, it will be accepted into our official catalog, where all users 
 will be able to consume and use the new model.
