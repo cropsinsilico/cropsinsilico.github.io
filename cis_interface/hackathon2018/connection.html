@@ -24,15 +24,15 @@
 
   
 
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Model Transformation" href="transformation.html" /> 
 
   
-  <script src="../_static/js/modernizr.min.js"></script>
+  <script src="../static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -171,7 +171,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/hackathon2018/connection.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../sources/hackathon2018/connection.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,9 +188,9 @@
 <h1>Connecting Models to Models<a class="headerlink" href="#connecting-models-to-models" title="Permalink to this headline">¶</a></h1>
 <p>Next we will connect your growth model to an existing network of models. From
 the user interface, load the <code class="docutils literal notranslate"><span class="pre">hackathon2018</span></code> integration network.</p>
-<img alt="../_images/interface_load.png" src="../_images/interface_load.png" />
+<img alt="../images/interface_load.png" src="../images/interface_load.png" />
 <p>You will see a network of 4 models connected to 6 input files.</p>
-<img alt="../_images/network_original.png" src="../_images/network_original.png" />
+<img alt="../images/network_original.png" src="../images/network_original.png" />
 <p>By right clicking on each model, you can get information about the model’s
 inputs and outputs.</p>
 <div class="section" id="model-overview">
@@ -199,19 +199,19 @@ inputs and outputs.</p>
 a plant layout describing how the plant grows in x, y, and z, and a time step.
 From this information it grows the canopy structure and outputs the updated
 structure. The canopy model is written in C++.</p>
-<img alt="../_images/network_canopy.png" src="../_images/network_canopy.png" />
+<img alt="../images/network_canopy.png" src="../images/network_canopy.png" />
 <p>The light model takes as input an ambient light level and the 3D structure of
 the canopy. It then calculates the light incident on each facet of the canopy
 structure which it outputs.</p>
-<img alt="../_images/network_light.png" src="../_images/network_light.png" />
+<img alt="../images/network_light.png" src="../images/network_light.png" />
 <p>The photosynthesis model takes as input a light intensity, temperature, and
 CO2. From this information, it calculates and output the photosynthesis rate.</p>
-<img alt="../_images/network_photosynthesis.png" src="../_images/network_photosynthesis.png" />
+<img alt="../images/network_photosynthesis.png" src="../images/network_photosynthesis.png" />
 <p>The growth model in this network is an alternative to the growth model we
 were working with in the previous section. It takes photosynthesis rate as
 an input and outputs the growth rate. We will be replacing this growth model
 with the one you created.</p>
-<img alt="hackathon2018/interface_images/network_growth.png" src="hackathon2018/interface_images/network_growth.png" />
+<img alt="hackathon2018/interfaceimages/network_growth.png" src="hackathon2018/interfaceimages/network_growth.png" />
 <p>You can trace the data as it flows from files and from one model to the next.</p>
 </div>
 <div class="section" id="replacing-the-growth-model">
@@ -222,35 +222,35 @@ one you just created.</p>
 <h3>Deleting the Old Model<a class="headerlink" href="#deleting-the-old-model" title="Permalink to this headline">¶</a></h3>
 <p>By right-clicking on the existing growth model, you can delete the existing
 model from the canvas.</p>
-<img alt="../_images/network_delete.png" src="../_images/network_delete.png" />
+<img alt="../images/network_delete.png" src="../images/network_delete.png" />
 </div>
 <div class="section" id="adding-your-model">
 <h3>Adding Your Model<a class="headerlink" href="#adding-your-model" title="Permalink to this headline">¶</a></h3>
 <p>You can then add your model by clicking the blue <code class="docutils literal notranslate"><span class="pre">+</span></code> button next to your
 model in the model palette.</p>
-<img alt="../_images/network_add.png" src="../_images/network_add.png" />
+<img alt="../images/network_add.png" src="../images/network_add.png" />
 <p>Once the model is added to the canvas, move it to the left of the canvas.</p>
-<img alt="../_images/network_no_connect.png" src="../_images/network_no_connect.png" />
+<img alt="../images/network_no_connect.png" src="../images/network_no_connect.png" />
 </div>
 <div class="section" id="making-connections">
 <h3>Making Connections<a class="headerlink" href="#making-connections" title="Permalink to this headline">¶</a></h3>
 <p>Now we want to connect our growth model to the other models in the network.
 First we connect the input dot (on the left side) for our growth model to
 the output from the photosynthesis model.</p>
-<img alt="../_images/network_input_dots.png" src="../_images/network_input_dots.png" />
+<img alt="../images/network_input_dots.png" src="../images/network_input_dots.png" />
 <p>To make the connection, click on one dot and then the other.</p>
-<img alt="../_images/network_input.png" src="../_images/network_input.png" />
+<img alt="../images/network_input.png" src="../images/network_input.png" />
 <p>Next we connect the output from our growth model to the growth rate input
 channel of the canopy model, by again clicking on one dot and then the other.</p>
-<img alt="../_images/network_output_dots.png" src="../_images/network_output_dots.png" />
-<img alt="../_images/network_output.png" src="../_images/network_output.png" />
+<img alt="../images/network_output_dots.png" src="../images/network_output_dots.png" />
+<img alt="../images/network_output.png" src="../images/network_output.png" />
 </div>
 </div>
 <div class="section" id="creating-the-yaml">
 <h2>Creating the YAML<a class="headerlink" href="#creating-the-yaml" title="Permalink to this headline">¶</a></h2>
 <p>Once you have finalized your model connections, you can use the interface to
 create your YAML file by clicking the <code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">Manifest</span></code> button,</p>
-<img alt="../_images/network_manifest.png" src="../_images/network_manifest.png" />
+<img alt="../images/network_manifest.png" src="../images/network_manifest.png" />
 <p>Copy this information to you clipboard and past it into a new file
 called <code class="docutils literal notranslate"><span class="pre">growth_network.yml</span></code> in the <code class="docutils literal notranslate"><span class="pre">cis_home</span></code> directory.</p>
 </div>
@@ -304,16 +304,16 @@ screen from all of the models being run.</p>
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
     
 
   
 
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
+  <script type="text/javascript" src="../static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

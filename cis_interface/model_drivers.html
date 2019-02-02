@@ -24,16 +24,16 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Code" href="code.html" />
     <link rel="prev" title="Input/Output Drivers" href="io_drivers.html" /> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -153,7 +153,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/model_drivers.rst.txt" rel="nofollow"> View page source</a>
+            <a href="sources/model_drivers.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,7 +170,7 @@
 <span id="model-drivers-rst"></span><h1>Model Drivers<a class="headerlink" href="#model-drivers" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.ModelDriver.</code><code class="descname">ModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>model_index=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.ModelDriver.</code><code class="descname">ModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>model_index=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for Model drivers and for running executable based models.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -341,38 +341,38 @@ client of.</p>
 </table>
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.after_loop">
-<code class="descname">after_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.after_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.after_loop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">after_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.after_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.after_loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actions to perform after run_loop has finished. Mainly checking
 if there was an error and then handling it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.before_loop">
-<code class="descname">before_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.before_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.before_loop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">before_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.before_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.before_loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actions before loop.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.before_start">
-<code class="descname">before_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.before_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.before_start" title="Permalink to this definition">¶</a></dt>
+<code class="descname">before_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.before_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.before_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actions to perform before the run starts.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.enqueue_output_loop">
-<code class="descname">enqueue_output_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.enqueue_output_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.enqueue_output_loop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">enqueue_output_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.enqueue_output_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.enqueue_output_loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Keep passing lines to queue.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.graceful_stop">
-<code class="descname">graceful_stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.graceful_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.graceful_stop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">graceful_stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.graceful_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.graceful_stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gracefully stop the driver.</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -393,7 +393,7 @@ machine.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.kill_process">
-<code class="descname">kill_process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.kill_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.kill_process" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kill_process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.kill_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.kill_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kill the process running the model, checking return code.</p>
 </dd></dl>
 
@@ -414,13 +414,13 @@ has not started.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.run_loop">
-<code class="descname">run_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.run_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.run_loop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">run_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.run_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.run_loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loop to check if model is still running and forward output.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.ModelDriver.ModelDriver.wait_process">
-<code class="descname">wait_process</code><span class="sig-paren">(</span><em>timeout=None</em>, <em>key=None</em>, <em>key_suffix=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/ModelDriver.html#ModelDriver.wait_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.wait_process" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_process</code><span class="sig-paren">(</span><em>timeout=None</em>, <em>key=None</em>, <em>key_suffix=None</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/ModelDriver.html#ModelDriver.wait_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.ModelDriver.ModelDriver.wait_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for some amount of time for the process to finish.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -448,7 +448,7 @@ Defaults to None and set based on the stack trace.</li>
 
 <dl class="class">
 <dt id="cis_interface.drivers.PythonModelDriver.PythonModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.PythonModelDriver.</code><code class="descname">PythonModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/PythonModelDriver.html#PythonModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.PythonModelDriver.PythonModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.PythonModelDriver.</code><code class="descname">PythonModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/PythonModelDriver.html#PythonModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.PythonModelDriver.PythonModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for running Python models.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -467,7 +467,7 @@ __init__ method.</li>
 </table>
 <dl class="classmethod">
 <dt id="cis_interface.drivers.PythonModelDriver.PythonModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/PythonModelDriver.html#PythonModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.PythonModelDriver.PythonModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/PythonModelDriver.html#PythonModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.PythonModelDriver.PythonModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -490,7 +490,7 @@ machine.</p>
 
 <dl class="class">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.MatlabModelDriver.</code><code class="descname">MatlabModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.MatlabModelDriver.</code><code class="descname">MatlabModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for running Matlab models.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -578,20 +578,20 @@ engine. False otherwise.</p>
 </div>
 <dl class="method">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.after_loop">
-<code class="descname">after_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.after_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.after_loop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">after_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.after_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.after_loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actions to perform after run_loop has finished. Mainly checking
 if there was an error and then handling it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.before_start">
-<code class="descname">before_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.before_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.before_start" title="Permalink to this definition">¶</a></dt>
+<code class="descname">before_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.before_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.before_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Actions to perform before the run loop.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.check_exits">
-<code class="descname">check_exits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.check_exits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.check_exits" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_exits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.check_exits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.check_exits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check to make sure the program dosn’t contain any exits as exits
 will shut down the Matlab engine as well as the program.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -606,13 +606,13 @@ will shut down the Matlab engine as well as the program.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.cleanup">
-<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close the Matlab session and engine.</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -633,13 +633,13 @@ machine.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.run_loop">
-<code class="descname">run_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.run_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.run_loop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">run_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.run_loop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.run_loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loop to check if model is still running and forward output.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.start_matlab">
-<code class="descname">start_matlab</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.start_matlab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.start_matlab" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start_matlab</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MatlabModelDriver.html#MatlabModelDriver.start_matlab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MatlabModelDriver.MatlabModelDriver.start_matlab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start matlab session and connect to it.</p>
 </dd></dl>
 
@@ -647,7 +647,7 @@ machine.</p>
 
 <dl class="class">
 <dt id="cis_interface.drivers.GCCModelDriver.GCCModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.GCCModelDriver.</code><code class="descname">GCCModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.GCCModelDriver.</code><code class="descname">GCCModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for running gcc compiled drivers.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -707,13 +707,13 @@ efile (str): Compiled executable file.</p>
 </table>
 <dl class="method">
 <dt id="cis_interface.drivers.GCCModelDriver.GCCModelDriver.cleanup">
-<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove compile executable.</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="cis_interface.drivers.GCCModelDriver.GCCModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -734,7 +734,7 @@ machine.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.GCCModelDriver.GCCModelDriver.parse_arguments">
-<code class="descname">parse_arguments</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.parse_arguments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.parse_arguments" title="Permalink to this definition">¶</a></dt>
+<code class="descname">parse_arguments</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.parse_arguments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.parse_arguments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sort arguments based on their syntax. Arguments ending with ‘.c’ or
 ‘.cpp’ are considered source and the first one will be compiled to an
 executable. Arguments starting with ‘-L’ or ‘-l’ are treated as linker
@@ -756,7 +756,7 @@ list.</td>
 
 <dl class="method">
 <dt id="cis_interface.drivers.GCCModelDriver.GCCModelDriver.remove_products">
-<code class="descname">remove_products</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.remove_products"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.remove_products" title="Permalink to this definition">¶</a></dt>
+<code class="descname">remove_products</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/GCCModelDriver.html#GCCModelDriver.remove_products"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.GCCModelDriver.GCCModelDriver.remove_products" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete products produced during the compilation process.</p>
 </dd></dl>
 
@@ -764,7 +764,7 @@ list.</td>
 
 <dl class="class">
 <dt id="cis_interface.drivers.MakeModelDriver.MakeModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.MakeModelDriver.</code><code class="descname">MakeModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.MakeModelDriver.</code><code class="descname">MakeModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for running make file compiled drivers. Before running the
 make command, the necessary compiler &amp; linker flags for the interface’s
 C/C++ library are stored the environment variables CISCCFLAGS and CISLDFLAGS
@@ -873,13 +873,13 @@ self.working_dir.</li>
 </table>
 <dl class="method">
 <dt id="cis_interface.drivers.MakeModelDriver.MakeModelDriver.cleanup">
-<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove compile executable.</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="cis_interface.drivers.MakeModelDriver.MakeModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -900,7 +900,7 @@ machine.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.MakeModelDriver.MakeModelDriver.make_target">
-<code class="descname">make_target</code><span class="sig-paren">(</span><em>target</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver.make_target"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver.make_target" title="Permalink to this definition">¶</a></dt>
+<code class="descname">make_target</code><span class="sig-paren">(</span><em>target</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/MakeModelDriver.html#MakeModelDriver.make_target"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.MakeModelDriver.MakeModelDriver.make_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the make command to make the target.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -918,7 +918,7 @@ machine.</p>
 
 <dl class="class">
 <dt id="cis_interface.drivers.CMakeModelDriver.CMakeModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.CMakeModelDriver.</code><code class="descname">CMakeModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>preserve_cache=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.CMakeModelDriver.</code><code class="descname">CMakeModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>preserve_cache=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for running cmake compiled drivers. Before running the
 cmake command, the cmake commands for setting the necessary compiler &amp; linker
 flags for the interface’s C/C++ library are written to a file called
@@ -1045,13 +1045,13 @@ run, otherwise all files created by cmake will be cleaned up.</p>
 </table>
 <dl class="method">
 <dt id="cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.cleanup">
-<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver.cleanup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.cleanup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove compile executable.</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1072,7 +1072,7 @@ machine.</p>
 
 <dl class="method">
 <dt id="cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.run_cmake">
-<code class="descname">run_cmake</code><span class="sig-paren">(</span><em>target=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver.run_cmake"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.run_cmake" title="Permalink to this definition">¶</a></dt>
+<code class="descname">run_cmake</code><span class="sig-paren">(</span><em>target=None</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/CMakeModelDriver.html#CMakeModelDriver.run_cmake"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.CMakeModelDriver.CMakeModelDriver.run_cmake" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the cmake command on the source.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1090,7 +1090,7 @@ machine.</p>
 
 <dl class="class">
 <dt id="cis_interface.drivers.LPyModelDriver.LPyModelDriver">
-<em class="property">class </em><code class="descclassname">cis_interface.drivers.LPyModelDriver.</code><code class="descname">LPyModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/LPyModelDriver.html#LPyModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.LPyModelDriver.LPyModelDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">cis_interface.drivers.LPyModelDriver.</code><code class="descname">LPyModelDriver</code><span class="sig-paren">(</span><em>name</em>, <em>args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/LPyModelDriver.html#LPyModelDriver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.LPyModelDriver.LPyModelDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for running LPy models.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1108,7 +1108,7 @@ __init__ method.</li>
 </table>
 <dl class="classmethod">
 <dt id="cis_interface.drivers.LPyModelDriver.LPyModelDriver.is_installed">
-<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cis_interface/drivers/LPyModelDriver.html#LPyModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.LPyModelDriver.LPyModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">is_installed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="modules/cis_interface/drivers/LPyModelDriver.html#LPyModelDriver.is_installed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cis_interface.drivers.LPyModelDriver.LPyModelDriver.is_installed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if this model driver is installed on the current
 machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1172,16 +1172,16 @@ machine.</p>
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
     
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  <script type="text/javascript" src="static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {
