@@ -1,5 +1,5 @@
-cis\_interface.examples package
-===============================
+cis_interface.examples package
+==============================
 
 Subpackages
 -----------

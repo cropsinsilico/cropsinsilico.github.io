@@ -1,5 +1,5 @@
-cis\_interface.metaschema.tests package
-=======================================
+cis_interface.metaschema.tests package
+======================================
 
 Module contents
 ---------------
