@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>yggdrasil.communication package &mdash; cis_interface 0.7.6 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="cis_interface 0.7.6 documentation" href="index.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> cis_interface
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="includeme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formatted_io.html">Formatted I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_client_io.html">Server/Client I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_client_io.html#one-server-two-clients">One Server, Two Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml.html">YAML Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c_format_strings.html">C-Style Format Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io_drivers.html">Input/Output Drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_drivers.html">Model Drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples_toc.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html">Release Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html#docs-checkout">Docs Checkout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hackathon2018/index.html">Welcome to the 2018 Crops in Silico Hackathon!</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cis_interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>yggdrasil.communication package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/yggdrasil.communication.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="yggdrasil-communication-package">
+<h1>yggdrasil.communication package<a class="headerlink" href="#yggdrasil-communication-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="yggdrasil.communication.tests.html">yggdrasil.communication.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-asciifilecomm-module">yggdrasil.communication.tests.test_AsciiFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-asciimapcomm-module">yggdrasil.communication.tests.test_AsciiMapComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-asciitablecomm-module">yggdrasil.communication.tests.test_AsciiTableComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-asynccomm-module">yggdrasil.communication.tests.test_AsyncComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-commbase-module">yggdrasil.communication.tests.test_CommBase module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-filecomm-module">yggdrasil.communication.tests.test_FileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-forkcomm-module">yggdrasil.communication.tests.test_ForkComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-ipccomm-module">yggdrasil.communication.tests.test_IPCComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-jsonfilecomm-module">yggdrasil.communication.tests.test_JSONFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-matfilecomm-module">yggdrasil.communication.tests.test_MatFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-objfilecomm-module">yggdrasil.communication.tests.test_ObjFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-pandasfilecomm-module">yggdrasil.communication.tests.test_PandasFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-picklefilecomm-module">yggdrasil.communication.tests.test_PickleFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-plyfilecomm-module">yggdrasil.communication.tests.test_PlyFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-rmqasynccomm-module">yggdrasil.communication.tests.test_RMQAsyncComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-rmqcomm-module">yggdrasil.communication.tests.test_RMQComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-servercomm-module">yggdrasil.communication.tests.test_ServerComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-yamlfilecomm-module">yggdrasil.communication.tests.test_YAMLFileComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#yggdrasil-communication-tests-test-zmqcomm-module">yggdrasil.communication.tests.test_ZMQComm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yggdrasil.communication.tests.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-asciifilecomm-module">
+<h2>yggdrasil.communication.AsciiFileComm module<a class="headerlink" href="#yggdrasil-communication-asciifilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-asciimapcomm-module">
+<h2>yggdrasil.communication.AsciiMapComm module<a class="headerlink" href="#yggdrasil-communication-asciimapcomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-asciitablecomm-module">
+<h2>yggdrasil.communication.AsciiTableComm module<a class="headerlink" href="#yggdrasil-communication-asciitablecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-asynccomm-module">
+<h2>yggdrasil.communication.AsyncComm module<a class="headerlink" href="#yggdrasil-communication-asynccomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-clientcomm-module">
+<h2>yggdrasil.communication.ClientComm module<a class="headerlink" href="#yggdrasil-communication-clientcomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-commbase-module">
+<h2>yggdrasil.communication.CommBase module<a class="headerlink" href="#yggdrasil-communication-commbase-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-errorcomm-module">
+<h2>yggdrasil.communication.ErrorComm module<a class="headerlink" href="#yggdrasil-communication-errorcomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-filecomm-module">
+<h2>yggdrasil.communication.FileComm module<a class="headerlink" href="#yggdrasil-communication-filecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-forkcomm-module">
+<h2>yggdrasil.communication.ForkComm module<a class="headerlink" href="#yggdrasil-communication-forkcomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-ipccomm-module">
+<h2>yggdrasil.communication.IPCComm module<a class="headerlink" href="#yggdrasil-communication-ipccomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-jsonfilecomm-module">
+<h2>yggdrasil.communication.JSONFileComm module<a class="headerlink" href="#yggdrasil-communication-jsonfilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-matfilecomm-module">
+<h2>yggdrasil.communication.MatFileComm module<a class="headerlink" href="#yggdrasil-communication-matfilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-objfilecomm-module">
+<h2>yggdrasil.communication.ObjFileComm module<a class="headerlink" href="#yggdrasil-communication-objfilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-pandasfilecomm-module">
+<h2>yggdrasil.communication.PandasFileComm module<a class="headerlink" href="#yggdrasil-communication-pandasfilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-picklefilecomm-module">
+<h2>yggdrasil.communication.PickleFileComm module<a class="headerlink" href="#yggdrasil-communication-picklefilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-plyfilecomm-module">
+<h2>yggdrasil.communication.PlyFileComm module<a class="headerlink" href="#yggdrasil-communication-plyfilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-rmqasynccomm-module">
+<h2>yggdrasil.communication.RMQAsyncComm module<a class="headerlink" href="#yggdrasil-communication-rmqasynccomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-rmqcomm-module">
+<h2>yggdrasil.communication.RMQComm module<a class="headerlink" href="#yggdrasil-communication-rmqcomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-servercomm-module">
+<h2>yggdrasil.communication.ServerComm module<a class="headerlink" href="#yggdrasil-communication-servercomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-yamlfilecomm-module">
+<h2>yggdrasil.communication.YAMLFileComm module<a class="headerlink" href="#yggdrasil-communication-yamlfilecomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="yggdrasil-communication-zmqcomm-module">
+<h2>yggdrasil.communication.ZMQComm module<a class="headerlink" href="#yggdrasil-communication-zmqcomm-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Meagan Lang, David Raila.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.7.6',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
