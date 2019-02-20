@@ -84,6 +84,14 @@ yggdrasil.serialize.tests.test_YAMLSerialize module
     :undoc-members:
     :show-inheritance:
 
+yggdrasil.serialize.tests.test_serialize module
+-----------------------------------------------
+
+.. automodule:: yggdrasil.serialize.tests.test_serialize
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

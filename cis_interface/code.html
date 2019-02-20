@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Code &mdash; cis_interface 0.7.8 documentation</title>
+  <title>Code &mdash; cis_interface 0.7.10 documentation</title>
   
 
   
@@ -24,29 +24,20 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="cis_interface 0.7.8 documentation" href="index.html"/>
-        <link rel="next" title="Python Code" href="code_python.html"/>
-        <link rel="prev" title="Model Drivers" href="model_drivers.html"/> 
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Code" href="code_python.html" />
+    <link rel="prev" title="YAML Validation Schema" href="schema.html" /> 
 
   
   <script src="static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -68,7 +59,7 @@
             
             
               <div class="version">
-                0.7.8
+                0.7.10
               </div>
             
           
@@ -106,6 +97,9 @@
 <li class="toctree-l1"><a class="reference internal" href="c_format_strings.html">C-Style Format Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="io_drivers.html">Input/Output Drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_drivers.html">Model Drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_interface.html">Model Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metaschema.html">JSON Metaschema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">YAML Validation Schema</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Code</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="code_python.html">Python Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_c.html">C Code</a></li>
@@ -115,6 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples/examples_toc.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release.html">Release Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html#updating-and-testing-the-conda-recipe">Updating and Testing the Conda Recipe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release.html#docs-checkout">Docs Checkout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hackathon2018/index.html">Welcome to the 2018 Crops in Silico Hackathon!</a></li>
 </ul>
@@ -128,7 +123,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">cis_interface</a>
@@ -136,9 +131,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -210,6 +206,25 @@
 <li class="toctree-l4"><a class="reference internal" href="cis_interface.serialize.html#module-cis_interface.serialize">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="cis_interface.metaschema.datatypes.html">cis_interface.metaschema.datatypes package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.ArrayMetaschemaType">cis_interface.metaschema.datatypes.ArrayMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.ContainerMetaschemaType">cis_interface.metaschema.datatypes.ContainerMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.FixedMetaschemaType">cis_interface.metaschema.datatypes.FixedMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.FunctionMetaschemaType">cis_interface.metaschema.datatypes.FunctionMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.JSONArrayMetaschemaType">cis_interface.metaschema.datatypes.JSONArrayMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.JSONMetaschemaType">cis_interface.metaschema.datatypes.JSONMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.JSONObjectMetaschemaType">cis_interface.metaschema.datatypes.JSONObjectMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.MetaschemaType">cis_interface.metaschema.datatypes.MetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.ObjMetaschemaType">cis_interface.metaschema.datatypes.ObjMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.PlyMetaschemaType">cis_interface.metaschema.datatypes.PlyMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.ScalarMetaschemaType">cis_interface.metaschema.datatypes.ScalarMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.SchemaMetaschemaType">cis_interface.metaschema.datatypes.SchemaMetaschemaType module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes.conversions">cis_interface.metaschema.datatypes.conversions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.metaschema.datatypes.html#module-cis_interface.metaschema.datatypes">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cis_interface.drivers.html">cis_interface.drivers package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#submodules">Submodules</a></li>
@@ -237,7 +252,7 @@
 <li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#module-cis_interface.drivers.ServerRequestDriver">cis_interface.drivers.ServerRequestDriver module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#module-cis_interface.drivers.ServerResponseDriver">cis_interface.drivers.ServerResponseDriver module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#cis-interface-drivers-lpy-model-module">cis_interface.drivers.lpy_model module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#module-contents">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cis_interface.drivers.html#module-cis_interface.drivers">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cis_interface.examples.html">cis_interface.examples package</a><ul>
@@ -266,6 +281,7 @@
 <li class="toctree-l2"><a class="reference internal" href="code_c.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="interface_c.html">C Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="serialize_c.html">C Serialize API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datatypes_cpp.html">C/C++ Datatypes API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dataio_c.html">C DataIO API</a></li>
 </ul>
 </li>
@@ -274,6 +290,7 @@
 <li class="toctree-l1"><a class="reference internal" href="code_cpp.html">C++ Code</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="code_cpp.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="interface_cpp.html">C++ Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datatypes_cpp.html">C/C++ Datatypes API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dataio_cpp.html">C++ DataIO API</a></li>
 </ul>
 </li>
@@ -293,9 +310,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -304,7 +319,7 @@
         <a href="code_python.html" class="btn btn-neutral float-right" title="Python Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="model_drivers.html" class="btn btn-neutral" title="Model Drivers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="schema.html" class="btn btn-neutral" title="YAML Validation Schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -313,11 +328,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Meagan Lang, David Raila.
+        &copy; Copyright 2017, Meagan Lang, David Raila
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -332,37 +347,24 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.7.8',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="static/jquery.js"></script>
-      <script type="text/javascript" src="static/underscore.js"></script>
-      <script type="text/javascript" src="static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
